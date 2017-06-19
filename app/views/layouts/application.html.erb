@@ -17,11 +17,13 @@
     
     <form class="navbar-form navbar-right">
         <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-       
-          <%= link_to "SIGN OUT", class: 'btn btn-default navbar-btn', method: :delete %>
-        
-          <%= link_to "SIGN UP", class: 'btn btn-default navbar-btn', method: :get %>
-          <%= link_to "LOG IN", class: 'btn btn-default navbar-btn', method: :get %> 
+        <% if current_user %>
+          <%= link_to "SIGN OUT", destroy_user_session_path, class: 'btn btn-default navbar-btn', method: :delete %>
+        <% else %>
+          <%= link_to "SIGN UP", new_user_registration_path, class: 'btn btn-default navbar-btn', method: :get %>
+          <%= link_to "LOG IN", new_user_session_path, class: 'btn btn-default navbar-btn', method: :get %> 
+        <% end %>
+      
         
     </form>
   </div>
