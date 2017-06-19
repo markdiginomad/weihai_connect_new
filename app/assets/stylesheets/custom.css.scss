@@ -1,0 +1,294 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+
+body {
+    text-align: center;
+    background: #C9C9C9 !important;
+    color: black;
+    margin:auto;
+}
+
+header {
+    position: relative;
+}
+
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+    
+}
+
+.img {
+
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    
+}
+
+.logo
+
+{
+    float: left;
+    line-height: 20px;
+}
+
+.container-fluid {
+    margin: 0 auto !important;
+    width: 100% !important;
+    
+}
+
+.site-nav {
+    position: absolute;
+    background: #741618;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 0px; 
+    overflow: hidden;
+    margin-left: 0px;
+    z-index: 5000; 
+}
+
+.site-nav--open {
+    height: auto;
+    -webkit-transition: 400ms ease;
+    transition: 400ms ease;
+}
+
+.site-nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav li {
+    
+}
+
+.site-nav a {
+    display: block;
+    text-decoration: none; 
+    font-weight: bold;
+    
+}
+
+.menu-toggle {
+    padding: 0.6em;
+    height: 35px;
+    width: 35px;
+    margin: auto;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 1px;
+    background: transparent;
+    overflow: hidden;
+    
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: #ebeef1;
+    height: 1.5px;
+    width: 1.2em;
+    text-align: center;
+    border-radius: 1px; 
+    
+    
+}
+
+
+.hamburger::before {
+    transform: translateY(15px);
+}
+
+.hamburger::after {
+    transform: translateY(6px);
+}
+
+.open .hamburger {
+    transform: rotate (45deg);
+}
+
+@media (min-width: 570px) and (max-width: 690px) {
+     a {
+         padding: 10px !important;
+         letter-spacing: 0.5px !important;
+     }
+}
+
+
+
+@media (min-width: 569px){
+    .menu-toggle {
+        display: none;
+            position: inherit;
+    }
+    
+    .site-nav {
+        height: auto;
+        position: relative;
+        background: transparent;
+
+    }
+
+    .site-nav li {
+        display: inline-block;
+
+    }
+    
+    .site-nav a {
+ 
+ 
+    }
+    
+    .navbar-form {
+        border: 0 !important;
+        
+    }
+    
+    .logo 
+    { 
+      height: 100px ;   
+    }
+
+}
+
+
+
+.bluecolor {
+    background-color: #317ED5 !important;
+}
+
+.navbar-form {
+    padding-top: 24px !important;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+}
+
+.navbar-right {
+    margin-right: 0 !important;
+}
+
+
+.blueborder {
+     border-bottom: 1px solid #317ED5 !important;
+}
+
+
+ #links {
+    margin: 0px;
+    border-radius: 0;
+    font-size: 15px; 
+    font-weight: bold;
+ }
+ 
+a {
+   color: #E7E7E7 !important;
+   padding: 20px;
+   padding-top: 15px !important; 
+   letter-spacing: 1px !important;
+   text-shadow: 0.2px 0.2px black;
+ }
+
+
+.btn-default {
+        font-weight: bold !important;
+        color: #741618 !important;
+    	background-color: #bbc0c5 !important;
+    	border-color: #5a98ca !important;
+}
+
+button {
+    margin-top: 0px !important;
+    color: red;
+}
+
+.link:active {
+  background: orange !important;
+  color: white !important;
+  border: 0;
+}
+
+.link {
+  height: 50px;
+  -webkit-transition: background-color 400ms ease !important;
+  transition: background-color 400ms ease !important;
+}
+
+.link:hover {
+  color: #7a0606 !important;
+  border: 0;
+  background-color: #0098ff !important;
+  -webkit-transform: translate(0px, 0px) !important;
+  -ms-transform: translate(0px, 0px) !important;
+  transform: translate(0px, 0px) !important;
+  text-decoration: none !important;
+}
+
+@mixin borderbottom {
+    border-bottom: 1 px solid #4C2629;
+}
+
+@mixin borderallaround {
+    border: 1px solid #4C2629;
+}
+
+@mixin radius {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+@mixin shadow {
+    -moz-box-shadow: 0 0px 10px 0px olive;
+    -webkit-box-shadow: 0 0px 10px 0px olive;
+}
+
+@mixin shadow3sides{
+    -moz-box-shadow: 0px 0px 5px 0px olive;
+    -webkit-box-shadow: 0px 0px 5px 0px olive;
+}
+
+.shadow 
+ { 
+   @include shadow; 
+}
+
+.top-content-columns {
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+
+.left-column, .right-column {
+  box-sizing: border-box;
+  flex-basis: 45%; 
+  
+}
+
+@media (min-width: 900px) {
+    .top-content-columns {
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+
+#footer {
+    
+}
+
