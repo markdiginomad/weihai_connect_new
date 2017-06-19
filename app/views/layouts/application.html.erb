@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WeihaiConnectNew</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Weihai Connect</title>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>  
 </head>
 <body>
+  
+<section>
+<header>
+  <div class="container-fluid">
+    
+    <div class="logo"><h2><%= link_to image_tag("whlog.png", alt: "WEIHAI CONNECT", width: "300px"), root_path, class: 'navbar-brand'%></h2>
+    </div>
+    
+    <form class="navbar-form navbar-right">
+        <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+       
+          <%= link_to "SIGN OUT", class: 'btn btn-default navbar-btn', method: :delete %>
+        
+          <%= link_to "SIGN UP", class: 'btn btn-default navbar-btn', method: :get %>
+          <%= link_to "LOG IN", class: 'btn btn-default navbar-btn', method: :get %> 
+        
+    </form>
+  </div>
+  
+  <div class="container-fluid bluecolor">
+    
+    <nav class="site-nav">
+      <ul>
+        <li><a class="link" href="#">MEMBERS</a></li>
+        <li><a class="link" href="#">GROUPS</a></li>
+        <li><a class="link" href="#">FORUM</a></li>
+        <li><a class="link" href="#">LISTINGS</a></li>
+        <li><a class="link" href="#">MEDIA</a></li>
+        <li><%= link_to "CONTACT", class: "link" %></li>
+      </ul>
+    </nav>
+    
+    <div class="menu-toggle">
+      <div class="hamburger">
+      </div>
+    </div>
+    
+  </div>
+ </header>
+</section>
 
+<div class="container">
+  <% flash.each do |key, value| %> 
+    <%= content_tag :div, value, class: "alert alert-#{key}" %>
+  <% end %> 
+  
 <%= yield %>
-
+</div> 
+  
+  
 </body>
+</html>
+
 </html>
