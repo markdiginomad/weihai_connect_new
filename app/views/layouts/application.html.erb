@@ -37,7 +37,11 @@
         <li><a class="link" href="#">FORUM</a></li>
         <li><a class="link" href="#">LISTINGS</a></li>
         <li><a class="link" href="#">REVIEWS</a></li>
+         <% if current_user %>
+         <li><%= link_to "YOUR PAGE", "#", class: "link" %></li>
+        <% else %>
         <li><%= link_to "CONTACT", new_contact_path, class: "link" %></li>
+        <% end %>
       </ul>
     </nav>
     <div class="menu-toggle">

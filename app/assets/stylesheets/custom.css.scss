@@ -215,6 +215,11 @@ a {
    letter-spacing: 1px !important;
    text-shadow: 0.2px 0.2px black;
  }
+ 
+ a:active {
+  background: orange !important;
+ 
+ }
 
 
 .btn-default {
