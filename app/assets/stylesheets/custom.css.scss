@@ -12,7 +12,13 @@ body {
     margin:auto;
 }
 
-.first_name 
+.img 
+{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.first_letter_cap 
 { 
     text-transform: capitalize; 
     
@@ -54,6 +60,8 @@ header::after {
 .container-fluid {
     margin: 0 auto !important;
     width: 100% !important;
+    -moz-box-shadow: 0px 0px 10px 0px olive;
+    -webkit-box-shadow: 0px 0px 10px 0px olive;
     
 }
 
@@ -66,8 +74,6 @@ header::after {
     text-align: center;
     height: 0px; 
     overflow: hidden;
-    margin-left: 0px;
-    z-index: 5000; 
 }
 
 .site-nav--open {
@@ -215,11 +221,8 @@ a {
    letter-spacing: 1px !important;
    text-shadow: 0.2px 0.2px black;
  }
- 
- a:active {
-  background: orange !important;
- 
- }
+
+
 
 
 .btn-default {

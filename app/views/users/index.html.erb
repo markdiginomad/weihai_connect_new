@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <div class="well well_tables">
+       <h1>
+            Total Members Online </br>
+            Total Members Joined </br>
+            
+            Members
+        </h1>
+        
+        <ul class="list-unstyled">
+            <% @users.each do |user| %>
+          
+             <% if user.profile %>
+              <li>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Name</th>
+                              <th>Hometown</th>
+                              <th>Member's Page</th>
+                              <th>Friend Request</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                          <td>
+                  <%= image_tag user.profile.avatar.url(:thumb), class: 'user-show-avatar' %>
+                          </td>
+                          <td>
+        <%= content_tag :span, user.profile.first_name, class: "first_letter_cap" %> <%= user.profile.last_name %>
+                          </td>
+                          <td>
+                  <%= content_tag :span, user.profile.hometown, class: "first_letter_cap" %>
+                          </td>
+                          <td>
+                       <% link_to user do %>
+                        <button class: 'btn btn-default navbar-btn'></button> 
+                       <% end %>
+                          </td>
+                          <td>
+                  
+                          </td>
+                      </tr>
+                     </tbody>
+                  </table>
+              </li>
+             <% end %>
+            <% end %>
+        </ul>
+      </div>
+  </div>
+</div>
+
+
+

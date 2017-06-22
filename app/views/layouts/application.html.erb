@@ -32,13 +32,13 @@
     
     <nav class="site-nav">
       <ul>
-        <li><a class="link" href="#">MEMBERS</a></li>
-        <li><a class="link" href="#">GROUPS</a></li>
-        <li><a class="link" href="#">FORUM</a></li>
-        <li><a class="link" href="#">LISTINGS</a></li>
-        <li><a class="link" href="#">REVIEWS</a></li>
+        <li><%= link_to "MEMBERS", users_path, class: "link" %></li>
+        <li><%= link_to "GROUPS", "#", class: "link" %></li>
+        <li><%= link_to "FORUM", "#", class: "link" %></li>
+        <li><%= link_to "LISTINGS", "#", class: "link" %></li>
+        <li><%= link_to "REVIEWS", "#", class: "link" %></li>
          <% if current_user %>
-         <li><%= link_to "YOUR PAGE", "#", class: "link" %></li>
+         <li><%= link_to "YOUR PAGE", root_path, class: "link" %></li>
         <% else %>
         <li><%= link_to "CONTACT", new_contact_path, class: "link" %></li>
         <% end %>
