@@ -13,3 +13,13 @@ td {
 th {
     text-align: center !important;
 }
+
+.table-hover {
+    background-color: #395697 !important; 
+}
+
+.table-hover tr:hover td {
+ background-color: #0077DD;
+ color:#fff;
+}
+
