@@ -38,7 +38,7 @@
         <li><%= link_to "LISTINGS", "#", class: "link" %></li>
         <li><%= link_to "REVIEWS", "#", class: "link" %></li>
          <% if current_user %>
-         <li><%= link_to "YOUR PAGE", root_path, class: "link" %></li>
+         <li><%= link_to "MY PAGE", root_path, class: "link" %></li>
         <% else %>
         <li><%= link_to "CONTACT", new_contact_path, class: "link" %></li>
         <% end %>

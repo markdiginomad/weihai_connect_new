@@ -1,14 +1,14 @@
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-      <div class="well well_tables">
-       <h1>
+  <div class="col-md-10 col-md-offset-1">
+      <div class="well well_member_index well_tables">
+       <h1 class="member_top_h1_index_font_text">
             Total Members Online </br>
             Total Members Joined </br>
             
             Members
         </h1>
         
-        <ul class="list-unstyled">
+       
             <% @users.each do |user| %>
           
              <% if user.profile %>
@@ -50,7 +50,7 @@
               
              <% end %>
             <% end %>
-        </ul>
+        
       </div>
   </div>
 </div>
