@@ -1,10 +1,6 @@
 .well_tables {
     padding: 0px !important;
     text-align: inherit !important;
-    -moz-box-shadow: 0px 0px 10px 0px olive;
-    -webkit-box-shadow: 0px 0px 10px 0px olive;
-    
-  
 }
 
 td {
@@ -15,12 +11,14 @@ th {
     text-align: center !important;
 }
 
-.table-hover {
-    background-color: #2e3a42 !important; 
-}
+
 
 .table-hover tr:hover td {
  background-color: #0077DD;
  color:#fff;
 }
 
+.well
+{
+ border: 0px !important;
+}
