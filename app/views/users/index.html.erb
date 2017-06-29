@@ -20,15 +20,17 @@
                   <%= image_tag user.profile.avatar.url(:thumb), class: 'user-show-avatar' %>
                           </td>
                           <td>
-                        <%= link_to user do %>
-       <%= content_tag :span, user.profile.first_name, class: "first_letter_cap" %> <% end %> <%= user.profile.last_name %>
+       <%= content_tag :span, user.profile.first_name, class: "first_letter_cap" %>  <%= user.profile.last_name %>
                          </td>
                           <td>
                   <%= content_tag :span, user.profile.hometown, class: "first_letter_cap" %>
                           </td>
                           <td>
-                       
+                      <% if user_signed_in? %> 
                         <%= link_to "My Profile", user, class: 'btn btn-success' %>
+                       <% else %>
+                        <%= link_to "My Profile", new_user_session_path, class: 'btn btn-success' %>
+                        <% end %>
                        
                           </td>
                       </tr>

@@ -4,6 +4,7 @@
         <div class="well">
          <%= image_tag @user.profile.avatar.url(:medium), class: 'user-show-avatar' %>
          <h1>  
+         
                 Name: <%= content_tag :span, current_user.profile.first_name, class: "first_letter_cap" %> 
                       <%= @user.profile.last_name %> <br/>
                Hometown: <%= content_tag :span, @user.profile.hometown, class: "first_letter_cap" %> </br>
